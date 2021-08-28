@@ -4,7 +4,8 @@ radio.onReceivedString(function (receivedString) {
     Math.map(signal, -95, -42, 0, 9),
     9
     )
-    if (signal >= -73 && signal <= -35) {
+    if (signal >= -63 && signal <= -25) {
+        music.startMelody(music.builtInMelody(Melodies.Baddy), MelodyOptions.Once)
         basic.showIcon(IconNames.No)
         basic.showLeds(`
             . . . . .
@@ -14,7 +15,6 @@ radio.onReceivedString(function (receivedString) {
             . . . . .
             `)
         basic.showIcon(IconNames.No)
-        music.startMelody(music.builtInMelody(Melodies.Wawawawaa), MelodyOptions.Once)
     } else {
         basic.showIcon(IconNames.Yes)
     }
